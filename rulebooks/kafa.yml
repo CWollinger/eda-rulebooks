@@ -9,18 +9,22 @@
         port: 9092
         group_id: testing
   rules:
-    - name: Controller Rule
-      condition: event.body.event == 1
+    - name: Controller Ruleody.event == 1
       action:
         run_job_template:
-          name: Kafka event 1
+          name: Kafk
+      condition: event.ba event 1
           organization: Default
     - name: Check defined
       condition: event.body.debug is defined
       action:
         debug:
-    - name: Privent event
+    - name: Print event
       condition: event.body.print.confirm == true
+      action:
+        print_event:
+    - name: Print array event
+      condition: event.body.debug.employee[1].firstName == "Maria"
       action:
         print_event:
     - name: Stop
