@@ -20,7 +20,7 @@
       action:
         debug:
     - name: Print array event
-      condition: event.body.debug.employee[1].firstName == "Maria"
+      condition: event.body.employees.employee[1].firstName == "Maria"
       action:
         print_event:
     - name: Print event
