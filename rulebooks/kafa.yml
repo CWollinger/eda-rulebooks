@@ -5,7 +5,7 @@
     - name: Kafka
       ansible.eda.kafka:
         topic: eda
-        host: localhost
+        host: 192.168.178.68
         port: 9092
         group_id: testing
   rules:
