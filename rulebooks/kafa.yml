@@ -27,6 +27,10 @@
       condition: event.body.print.confirm == true
       action:
         print_event:
+    - name: Print event 2
+      condition: event.body.print.confirm.really == true
+      action:
+        print_event:
     - name: Stop
       condition: event.body == stop
       action:
