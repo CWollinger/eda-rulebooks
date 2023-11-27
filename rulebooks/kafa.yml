@@ -31,6 +31,8 @@
       condition: event.body == stop
       action:
         print_event:
+        shutdown:
+          message: Shutting because of kafka stop event
     - name: Stop
       condition: event.body == stop
       action:
