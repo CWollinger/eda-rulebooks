@@ -1,0 +1,17 @@
+---
+- name: Demo rules with kafka as source
+  hosts: localhost
+  sources:
+    - ansible.eda.webhook:
+        port: 5000
+  rules:
+    - name: match webhook event
+      condition: event.payload.ping == "pong"
+      action:
+        debug:
+          msg: "Rule fired successfully"
+
+    - name: shutdown
+      condition: event.payload.shutdown is defined
+      action:
+        shutdown:
