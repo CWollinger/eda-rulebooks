@@ -30,8 +30,7 @@
     - name: Print stop
       condition: event.body == stop
       action:
-        shutdown:
-          message: Shutting because of kafka stop event
+        print_event:
     - name: Stop
       condition: event.body == stop
       action:
